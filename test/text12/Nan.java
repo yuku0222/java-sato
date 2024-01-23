@@ -18,7 +18,7 @@ class MoreCalc extends Calculator {
     }
 }
 
-public class Main {
+public class Nan {
     public static void main(String[] args) {
         //クラスのインスタンスを生成
         MoreCalc Instance = new MoreCalc();
