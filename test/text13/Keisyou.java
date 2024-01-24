@@ -1,5 +1,6 @@
-// スーパークラス
-class Person {
+package text13;
+
+abstract class Person {
     String name;
     String job;
     //-------- コンストラクタ ------------
@@ -8,10 +9,10 @@ class Person {
         this.job = job;
     }
     //-----------------------------------
-    public void introduce() {
-        System.out.println("氏名: " + name + "職業:" + job);
+    public abstract void introduce(); 
+      
     }
-}
+
 
 //<            サブクラス                >
 // Teacher クラス
@@ -26,7 +27,7 @@ class Teacher extends Person {
 
 
     // Teacher クラスの introduce メソッド
-    public void introduceAsTeacher() {
+    public void introduce() {
         System.out.println("氏名: " + name + "職業:" + job + "担当科目:" + subject);
     }
 }
@@ -43,8 +44,8 @@ class Cook extends Person {
 
 
     // Cook クラスの introduce メソッド
-    public void introduceAsCook() {
-        System.out.println("氏名: " + name + "職業:" + job + "担当科目:" + specialities);
+    public void introduce() {
+        System.out.println("氏名: " + name + "職業:" + job + "得意料理:" + specialities);
     }
 }
 
@@ -53,16 +54,16 @@ class Cook extends Person {
 
 
 // メインクラス
-public class Nan2 {
+class Keisyou {
     public static void main(String[] args) {
         // Teacher クラスのインスタンスを作成
-        Teacher myTeacher = new Teacher("近藤勇\n","教員\n" ,"Go言語\n");
+        Teacher myTeacher = new Teacher("竹井一馬\n","教員\n" ,"情報処理\n");
 
         // Cook クラスのインスタンスを作成
-        Cook myCook = new Cook("沖田総司\n","シェフ\n", "オムライス\n");
+        Cook myCook = new Cook("大原太郎\n","シェフ\n", "オムライス\n");
     
-        myTeacher.introduceAsTeacher();
+        myTeacher.introduce();
 
-        myCook.introduceAsCook();
+        myCook.introduce();
     }
 }
