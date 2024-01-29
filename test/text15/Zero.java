@@ -1,6 +1,8 @@
+package text15;
+
 import java.util.Scanner;
 
-public class Rei {
+public class Zero{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -13,19 +15,19 @@ public class Rei {
             int num2 = scanner.nextInt();
 
             // 0で割る場合の例外処理
-            if (num2 == 0) {
-                throw new ArithmeticException("0 による割り算です！！");
-            }
+            // if (num2 == 0) {
+            //     throw new ArithmeticException("0 による割り算です！！");
+            // }
 
             // 割り算を実行し、結果を表示
-            double result = (double) num1 / num2;
+            double result = num1 / num2;
             System.out.println(num1 + " / " + num2 + " = " + result);
 
         } catch (java.util.InputMismatchException e) {
             System.out.println("整数を入力してください。");
 
         } catch (ArithmeticException e) {
-            System.out.println(e.getMessage());
+            System.out.println("0による割り算です");
 
         } finally {
             System.out.println("処理終了");
@@ -35,5 +37,5 @@ public class Rei {
 }
 
 // finally　= 後片付け
-// throw = 
-// getMessage =
+// throw = catchするのではなく、呼ばれる側に例外を投げる処理
+// getMessage
