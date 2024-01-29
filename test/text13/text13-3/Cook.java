@@ -1,4 +1,4 @@
-package text13;
+// package text13;
 //13-3
 public class Cook implements Person {
     private String name;

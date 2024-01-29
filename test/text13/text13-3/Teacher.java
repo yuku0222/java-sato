@@ -1,4 +1,4 @@
-package text13;
+// package text13;
 //13-3
 public class Teacher implements Person {
     private String name;
@@ -10,7 +10,7 @@ public class Teacher implements Person {
         this.job=job;
         this.subject = subject;
     }
-
+ 
     @Override
     public void introduce() {
         System.out.println("氏名: " + this.name + "職業:" + this.job + "担当科目:" + this.subject);
